@@ -1,0 +1,15 @@
+C:\Users\HumbleIcarus\Documents\Programming 1410-1415\Programming-1410\Packing-Inventory\bin\Debug\net9.0\Packing-Inventory.exe
+C:\Users\HumbleIcarus\Documents\Programming 1410-1415\Programming-1410\Packing-Inventory\bin\Debug\net9.0\Packing-Inventory.deps.json
+C:\Users\HumbleIcarus\Documents\Programming 1410-1415\Programming-1410\Packing-Inventory\bin\Debug\net9.0\Packing-Inventory.runtimeconfig.json
+C:\Users\HumbleIcarus\Documents\Programming 1410-1415\Programming-1410\Packing-Inventory\bin\Debug\net9.0\Packing-Inventory.dll
+C:\Users\HumbleIcarus\Documents\Programming 1410-1415\Programming-1410\Packing-Inventory\bin\Debug\net9.0\Packing-Inventory.pdb
+C:\Users\HumbleIcarus\Documents\Programming 1410-1415\Programming-1410\Packing-Inventory\obj\Debug\net9.0\Packing-Inventory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HumbleIcarus\Documents\Programming 1410-1415\Programming-1410\Packing-Inventory\obj\Debug\net9.0\Packing-Inventory.AssemblyInfoInputs.cache
+C:\Users\HumbleIcarus\Documents\Programming 1410-1415\Programming-1410\Packing-Inventory\obj\Debug\net9.0\Packing-Inventory.AssemblyInfo.cs
+C:\Users\HumbleIcarus\Documents\Programming 1410-1415\Programming-1410\Packing-Inventory\obj\Debug\net9.0\Packing-Inventory.csproj.CoreCompileInputs.cache
+C:\Users\HumbleIcarus\Documents\Programming 1410-1415\Programming-1410\Packing-Inventory\obj\Debug\net9.0\Packing-Inventory.sourcelink.json
+C:\Users\HumbleIcarus\Documents\Programming 1410-1415\Programming-1410\Packing-Inventory\obj\Debug\net9.0\Packing-Inventory.dll
+C:\Users\HumbleIcarus\Documents\Programming 1410-1415\Programming-1410\Packing-Inventory\obj\Debug\net9.0\refint\Packing-Inventory.dll
+C:\Users\HumbleIcarus\Documents\Programming 1410-1415\Programming-1410\Packing-Inventory\obj\Debug\net9.0\Packing-Inventory.pdb
+C:\Users\HumbleIcarus\Documents\Programming 1410-1415\Programming-1410\Packing-Inventory\obj\Debug\net9.0\Packing-Inventory.genruntimeconfig.cache
+C:\Users\HumbleIcarus\Documents\Programming 1410-1415\Programming-1410\Packing-Inventory\obj\Debug\net9.0\ref\Packing-Inventory.dll
