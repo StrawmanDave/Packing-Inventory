@@ -12,6 +12,7 @@
 ///There needs to be properties to Pack that allow it to report current items count, weight and volume as well as the limits to each
 ///Then I need to create a program that creates a new pack and then allows the user to add/attempt to add items chosen from a menu
 
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics;
 using System.Linq.Expressions;
 using System.Reflection.Metadata.Ecma335;
@@ -60,12 +61,8 @@ while(pack.isFull() == false)
         break;
     }
 }
-
-Console.WriteLine("Your pack is full and now has");
-foreach(InventoryItem item in pack.Store)
-{
-    Console.WriteLine(item.Name);
-}
+Console.WriteLine("Your pack is now full of");
+pack.DisplayItems();
 
 class Arrow : InventoryItem
 {
@@ -154,8 +151,8 @@ class Pack
     public Pack()
     {
         maxItems = 15;
-        maxVolume = 45;
-        maxWeight = 55;
+        maxVolume = 30;
+        maxWeight = 25;
     }
 
     public double CurrentWeight()
@@ -236,5 +233,66 @@ class Pack
         }
 
         return false;
+    }
+
+    public void DisplayItems()
+    {
+        int arrowCount = 0;
+        int bowCount = 0;
+        int ropeCount = 0;
+        int waterCount = 0;
+        int foodCount = 0;
+        int swordCount = 0;
+        foreach(InventoryItem item in Store)
+        {
+            if(item.Name == "Arrow")
+            {
+                arrowCount ++;
+            }
+            if(item.Name == "Bow")
+            {
+                bowCount++;
+            }
+            if(item.Name == "Rope")
+            {
+                ropeCount++;
+            }
+            if(item.Name == "Water")
+            {
+                waterCount ++;
+            }
+            if(item.Name == "Food")
+            {
+                foodCount ++;
+            }
+            if(item.Name == "Sword")
+            {
+                swordCount ++;
+            }
+        }
+        if(arrowCount > 0)
+        {
+            Console.WriteLine($"Arrow {arrowCount}");
+        }
+        if(bowCount > 0)
+        {
+            Console.WriteLine($"Bow {bowCount}");
+        }
+        if(ropeCount > 0)
+        {
+            Console.WriteLine($"Rope {ropeCount}");
+        }
+        if(waterCount > 0)
+        {
+            Console.WriteLine($"Water {waterCount}");
+        }
+        if(foodCount > 0)
+        {
+            Console.WriteLine($"Food {foodCount}");
+        }
+        if(swordCount > 0)
+        {
+            Console.WriteLine($"Sword {swordCount}");
+        }
     }
 }
