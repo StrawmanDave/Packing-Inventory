@@ -12,11 +12,14 @@
 ///There needs to be properties to Pack that allow it to report current items count, weight and volume as well as the limits to each
 ///Then I need to create a program that creates a new pack and then allows the user to add/attempt to add items chosen from a menu
 
-using System.ComponentModel.DataAnnotations.Schema;
+///Labeling Inventory
+///Override the exiting Tostring method from the object base class on all of you rinventory item subclasses to give them a name. For example, Rope.ToString returns "Rope"
+///Override ToString on the pack class to display th econtents of the pack. If a pack contains water rope, and two arrows, then calling Tostring on the pack should show the items.
+///Before the user chooses the next itme to add, display the pack's curent contents via its new ToString method.
+
 using System.Diagnostics;
-using System.Linq.Expressions;
-using System.Reflection.Metadata.Ecma335;
-using Microsoft.VisualBasic;
+using System.Security.Cryptography.X509Certificates;
+
 string menu = @"
 1)Arrow weight 0.1 Volume 0.05
 2)Bow weight 1 volume 4
@@ -32,6 +35,7 @@ while(pack.isFull() == false)
     Console.WriteLine("What whould you like to add to your pack?");
     Console.WriteLine($"Your pack can now hold {pack.maxWeight - pack.CurrentWeight()} of weight, {pack.maxVolume - pack.CurrentVolume()} of volume, and {pack.maxItems - pack.CurrentItems()} of Items.");
     Console.WriteLine(menu);
+    Console.WriteLine(pack.ToString());
     string choice = Console.ReadLine();
     switch(choice)
     {
@@ -72,6 +76,11 @@ class Arrow : InventoryItem
         Weight = 0.1;
         Volume = 0.05;
     }
+
+    public override string ToString()
+    {
+        return "Arrow";
+    }
 }
 
 class Bow : InventoryItem
@@ -81,6 +90,11 @@ class Bow : InventoryItem
         Name = "Bow";
         Weight = 1;
         Volume = 4;
+    }
+
+    public override string ToString()
+    {
+        return Name;
     }
 }
 
@@ -92,6 +106,11 @@ class Rope : InventoryItem
         Weight = 1;
         Volume = 1.5;
     }
+
+    public override string ToString()
+    {
+        return Name;
+    }
 }
 
 class Water : InventoryItem
@@ -101,6 +120,11 @@ class Water : InventoryItem
         Name = "Water";
         Weight = 2;
         Volume = 3;
+    }
+
+    public override string ToString()
+    {
+        return Name;
     }
 }
 
@@ -112,6 +136,10 @@ class Sword : InventoryItem
         Weight = 5;
         Volume = 3;
     }
+    public override string ToString()
+    {
+        return Name;
+    }
 }
 
 class Food : InventoryItem
@@ -121,6 +149,11 @@ class Food : InventoryItem
         Name = "Food";
         Weight = 1;
         Volume = 0.5;
+    }
+
+    public override string ToString()
+    {
+        return Name;
     }
 }
 class InventoryItem
@@ -233,6 +266,18 @@ class Pack
         }
 
         return false;
+    }
+
+    public override string ToString()
+    {
+        string listItems = "Pack containing ";
+
+        for(int i = 0; i <Store.Count; i++)
+        {
+            listItems = listItems + Store[i].ToString() + ",";
+        }
+
+        return listItems;
     }
 
     public void DisplayItems()
